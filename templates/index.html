@@ -1,0 +1,30 @@
+<!-- /your_project_folder/templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Sender</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Email Sender</h1>
+    
+    <form method="POST" action="/send_email">
+        <label for="email_sender">Email Sender:</label>
+        <input type="email" id="email_sender" name="email_sender" required>
+
+        <label for="email_receiver">Email Receiver:</label>
+        <input type="email" id="email_receiver" name="email_receiver" required>
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+
+        <label for="body">Body:</label>
+        <textarea id="body" name="body" rows="4" required></textarea>
+
+        <button type="submit">Send Email</button>
+    </form>
+
+</body>
+</html>
